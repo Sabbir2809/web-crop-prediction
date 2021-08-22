@@ -1,15 +1,11 @@
 # Importing essential libraries and modules
-from flask import Flask, render_template, request, Markup
+from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
 import requests
 import config
 import pickle
-import io
-import torch
-from torchvision import transforms
-from PIL import Image
-from utils.model import ResNet9
+
 
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
 # Loading crop recommendation model
