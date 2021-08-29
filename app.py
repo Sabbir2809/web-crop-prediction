@@ -6,7 +6,6 @@ import requests
 import config
 import pickle
 
-
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
 # Loading crop recommendation model
 crop_recommendation_model_path = 'models/RandomForest.pkl'
@@ -55,10 +54,10 @@ def crop_recommend():
     title = 'AgroTech - Crop Recommendation'
     return render_template('crop.html', title=title)
 
+
 # ===============================================================================================
 # RENDER PREDICTION PAGES
 # render crop recommendation result page
-
 @ app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
     title = 'AgroTech - Crop Recommendation'
@@ -81,7 +80,6 @@ def crop_prediction():
             return render_template('crop-result.html', prediction=final_prediction, title=title)
         else:
             return render_template('try_again.html', title=title)
-
 
 # ===============================================================================================
 if __name__ == '__main__':
